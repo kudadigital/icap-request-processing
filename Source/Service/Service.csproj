@@ -21,6 +21,17 @@
     <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\lib\linux\SDK\libglasswall.classic.so" Link="lib/linux/libglasswall.classic.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\lib\windows\SDK\glasswall.classic.dll" Link="lib/windows/glasswall.classic.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libfreetype.so.6" Link="libfreetype.so.6">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Common\Engine.Common\Engine.Common.csproj" />
     <ProjectReference Include="..\Common\Engine\Engine.csproj" />
   </ItemGroup>

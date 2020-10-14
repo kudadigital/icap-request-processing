@@ -33,8 +33,9 @@ namespace Service
 
         private string RebuildFile()
         {
-            var status = "Unknown";
             byte[] protectedFile = null;
+
+            Console.WriteLine($"Using Glasswall Version: {_glasswallVersionService.GetVersion()}");
 
             var file = File.ReadAllBytes(_configuration["INPUT_PATH"]);
 
@@ -42,6 +43,7 @@ namespace Service
 
             Console.WriteLine($"Filetype Detected: {fileType.FileTypeName}");
 
+            string status;
             if (fileType.FileType == FileType.Unknown)
             {
                 status = FileOutcome.Unmodified;
